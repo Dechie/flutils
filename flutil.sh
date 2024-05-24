@@ -13,16 +13,11 @@ SCRIPT_DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
 if [[ $1 == "new" ]]; then
 
 flutter create $2
-#a;lalkalkdfjakfdjafd
 cd $2
 PROJECT_DIR=$(pwd)
 echo "project dir: $PROJECT_DIR"
-#aa;ja;kda;lkjfdakfjd
 mkdir -p assets/images
 
-#a;kjakda;;a
-#sed -i '/#   - images/a_dot_burr.jpeg/a\    - assets/images/' pubspec.yaml
-#sed -i '/# assets:/a\# assets:/' pubspec.yaml
 sed -i '/# assets:/s/^# //' pubspec.yaml
 sed -i '/#   - images\/a_dot_burr.jpeg/s/^#.*$/  - assets\/images\//' pubspec.yaml
 
@@ -81,16 +76,6 @@ class _HomePageState extends State<HomePage> {
 
 ' > home.dart 
 
-#echo $2
-#cp cre.sh $2
-
-#echo $2
-#dir_=$(pwd)
-#script_path="$SCRIPT_DIR/$(basename "$0")"
-#echo "script path: ${script_path}"
-#echo "project path: ${PROJECT_DIR}"
-#cp  $script_path $PROJECT_DIR
-#chmod +x "$PROJECT_DIR/cre.sh"
 
 if [[ $3 == "withide" ]]; then
   $4 $2
